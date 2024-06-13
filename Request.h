@@ -2,6 +2,7 @@
 #define REQUEST_H
 
 class Request {
+private:
     int id;
 public:
     Request(int id);
