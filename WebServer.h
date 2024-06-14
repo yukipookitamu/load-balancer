@@ -5,12 +5,12 @@
 
 class WebServer {
     int id;
-    bool busy;
+    bool busy = false;
 public:
     WebServer(int id);
     int getId();
     void processRequest(Request &request);
-    bool isBusy();
+    bool isFree();
 };
 
 #endif 

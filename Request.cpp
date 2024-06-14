@@ -4,21 +4,21 @@ Request::Request(int id, std::string ipIn, std::string ipOut, int startTime, int
     : id(id), ipIn(ipIn), ipOut(ipOut), startTime(startTime), endTime(endTime) {}
 
 int Request::getId() {
-    return id;
+    return this->id;
 }
 
 std::string Request::getIpIn() {
-    return ipIn;
+    return this->ipIn;
 }
 
 std::string Request::getIpOut() {
-    return ipOut;
+    return this->ipOut;
 }
 
 int Request::getStartTime() {
-    return startTime;
+    return this->startTime;
 }
 
 int Request::getEndTime() {
-    return endTime;
+    return this->endTime;
 }
