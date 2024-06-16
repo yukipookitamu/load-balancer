@@ -6,7 +6,7 @@ void RequestQueue::enqueue(Request &request) {
 
 Request RequestQueue::dequeue() {
     if (queue.empty()) {
-        return Request(-1);
+        return Request(-1, "", "", -1, -1); // invalid request
     }
 
     Request request = queue.front();

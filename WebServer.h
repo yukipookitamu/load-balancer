@@ -2,13 +2,17 @@
 #define WEBSERVER_H
 
 #include "Request.h"
+#include <atomic>
 
 class WebServer {
     int id;
-    bool busy = false;
+    std::atomic<bool> busy {false};
 public:
     WebServer(int id);
-    int getId();
+    WebServer(const WebServer& other); // Copy constructor
+    WebServer& operator=(const WebServer& other); // Copy assignment operator
+
+    int getId() const;
     void processRequest(Request &request);
     bool isFree();
 };

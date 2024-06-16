@@ -18,6 +18,10 @@ public:
     int getSystemTime();
     RequestQueue& getRequestQueue();
     void loadBalance();
+    void simulate(int duration);
+
+    void addServer(WebServer &WebServer);
+    void removeServer(int serverId);
 };
 
 #endif

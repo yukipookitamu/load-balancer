@@ -22,3 +22,7 @@ int Request::getStartTime() {
 int Request::getEndTime() {
     return this->endTime;
 }
+
+int Request::getProcessingTime() {
+    return this->endTime - this->startTime;
+}

@@ -27,7 +27,7 @@ public:
 
     int getStartTime();
     int getEndTime();
-
+    int getProcessingTime();
 };
 
-#endif REQUEST_H
+#endif

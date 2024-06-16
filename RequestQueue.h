@@ -13,4 +13,4 @@ public:
     bool isEmpty();
 };
 
-#endif REQUEST_H
+#endif
