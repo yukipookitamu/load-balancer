@@ -6,6 +6,7 @@ TARGET = loadbalancer.exe
 SRC = main.cpp WebServer.cpp Request.cpp RequestQueue.cpp LoadBalancer.cpp
 OBJ = $(SRC:.cpp=.o)
 DEPS = WebServer.h Request.h RequestQueue.h LoadBalancer.h
+LOG = server.log
 
 .PHONY: all clean
 
@@ -18,7 +19,7 @@ $(TARGET): $(OBJ)
 	$(CXX) $(CXXFLAGS) -c $< -o $@
 
 clean:
-	-$(RM) $(OBJ) $(TARGET)
+	-$(RM) $(OBJ) $(TARGET) $(LOG)
 
 # For Windows compatibility
 ifeq ($(OS),Windows_NT)
